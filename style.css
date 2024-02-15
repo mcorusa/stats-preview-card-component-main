@@ -1,0 +1,102 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(233, 47%, 7%);
+    text-align: center;
+    font-family:'Inter', serif;
+}
+
+/* Mobile First*/
+
+.card{
+    background-color:hsl(244, 38%, 16%);
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.image-wrapper{
+    position: relative;
+}
+
+.card img{
+    width: 100%;
+    display: block;
+}
+
+.overlay-color{
+    background-color: hsla(271, 58%, 43%, 0.648);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.card-text{
+    padding: 3rem 4rem;
+}
+
+.heading{
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.heading .accent{
+    color: hsl(277, 64%, 61%);
+
+}
+
+.card-paragraf{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 1.125rem;
+    font-weight: 200;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+.stats-container .value{
+    color:hsl(0, 0%, 100%);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stats-container .key{
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width:1100px) {
+    .card{
+        max-width: 1000px;
+        display: flex;
+        flex-direction: row-reverse;
+        text-align: left;
+        align-items: center;
+    }
+
+    .flex-item{
+        flex-basis: 50%;
+    }
+
+    .stats-container{
+        display: flex;
+        gap: 2rem;
+    }
+}
